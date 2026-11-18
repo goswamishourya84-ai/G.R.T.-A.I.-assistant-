@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080817"><meta name="description" content="G.R.T. AI personal assistant">
+<link rel="manifest" href="/static/manifest.json"><link rel="icon" href="/static/icon.svg"><link rel="stylesheet" href="/static/style.css">
+<title>G.R.T. AI</title>
+</head>
+<body>
+<div id="splash" class="splash">
+  <div class="splash-orbit"><img src="/static/icon.svg" alt="GRT AI logo"></div>
+  <div class="splash-name">G.R.T. <span>AI</span></div>
+  <div class="splash-tag">YOUR SMART PERSONAL ASSISTANT</div>
+  <div class="loader"><i></i></div>
+</div>
+<main id="app" class="app hidden">
+<header class="top">
+  <div class="brand"><img src="/static/icon.svg" alt="GRT logo"><div><b>G.R.T. <span>AI</span></b><small>Your Smart Personal Assistant</small></div></div>
+  <button id="installBtn" class="mini hidden">Install</button>
+  <button id="settingsBtn" class="mini">⚙</button>
+</header>
+<section id="welcome" class="welcome">
+  <div class="eyebrow">YOUR PERSONAL AI</div><h1>Think beyond.<br><em>Create more.</em></h1>
+  <p>Ask anything. Learn anything. Your AI companion is ready.</p>
+  <div class="suggestions">
+    <button data-prompt="Mujhe ek creative idea do">✦ Creative idea</button>
+    <button data-prompt="Explain science in simple Hindi">⌁ Learn science</button>
+    <button data-prompt="Help me plan my day">◈ Plan my day</button>
+  </div>
+</section>
+<section id="chat" class="chat" aria-live="polite"></section>
+<form id="composer" class="composer">
+  <button type="button" id="micBtn" class="tool" aria-label="Voice input">🎙</button>
+  <input id="message" placeholder="Message G.R.T. AI..." maxlength="4000" autocomplete="off">
+  <button class="send" type="submit">➤</button>
+</form>
+<footer>G.R.T. AI can make mistakes. Check important information.</footer>
+</main>
+<div id="settingsModal" class="modal hidden">
+ <section class="panel">
+  <div class="panel-head"><h2>Personalize G.R.T. AI</h2><button id="closeSettings">✕</button></div>
+  <label>Display name<input id="displayName" maxlength="24" placeholder="Your name"></label>
+  <label>Theme<select id="theme"><option value="dark">Neon Dark</option><option value="light">Light</option><option value="purple">Midnight Purple</option></select></label>
+  <label>Language<select id="language"><option value="hi">Hindi</option><option value="en">English</option><option value="hinglish">Hinglish</option></select></label>
+  <label class="check"><input type="checkbox" id="speakReplies"> Speak AI replies aloud</label>
+  <button id="saveSettings" class="save">Save settings</button>
+  <p class="hint">Voice features depend on your browser and device permissions.</p>
+ </section>
+</div>
+<script src="/static/app.js"></script>
+</body></html>\n

@@ -1,0 +1,1 @@
+Flask>=3.0.0\nopenai>=1.30.0\ngunicorn>=21.2.0\n\n
